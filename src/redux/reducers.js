@@ -4,7 +4,19 @@ const user = (state = null) => state
 
 // add switch statements in here
 const cars = (state = [], action) => {
-    return state
+    switch(action.type) {
+        case "ADD_CAR":
+            return[...state, action.value];
+
+        case "REMOVE_CAR":
+            const copy = [...state];
+            copy.splice(action.value, 1);
+            return copy;
+
+        // all switches need a default return
+    default:
+        return state
+    }
 }
 
 export default combineReducers({ user, cars })
