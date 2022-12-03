@@ -8,9 +8,9 @@ import {
     TableRow
 } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
-import Chart from './Chart'
-import Total from './Total'
+import Chart from '../containers/Chart'
 import AddCar from '../containers/AddCar'
+import Total from '../containers/Total'
  
 const Dashboard = (props) => {
     console.log(props);
